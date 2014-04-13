@@ -52,7 +52,7 @@
 \end{itemize}
 
 \subsection{Household's problem}
-At date 0, the expected discounted sum of future period utilities for a household in country $i$ is given by
+The household in country $i$ maximize the expected discounted sum of future period utilities at data 0.
 
 \begin{equation*}
  \begin{aligned}
@@ -140,7 +140,35 @@ The real exchange rate,
 rx(s^t)=\frac{q_1^a(s^t)}{q_2^a(s^t)}=\frac{q_1^b(s^t)}{q_2^b(s^t)}
 \end{equation}
 
-
+\section{Data and computation}
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[scale=01]{parameter.pdf}
+    \end{center}
+    \caption{Parameters}
+    \label{parameter}
+\end{figure}
+\begin{table}[H]
+    \caption{Data Source}
+    \label{DataSource}
+    \begin{center}
+       \begin{tabular}{ll}
+    OECD Main Economic Indicators: all at constant price &                                                \\
+    \hline
+    \hline
+    US data               &                                                \\
+    \hline
+    GDP                   & Gross Domestic Product                         \\
+    consumption           & Private plus Government Final Consumption      \\
+    investment            & Gross Fixed Capital Formation                  \\
+    employment            & Civilian Employment Index                      \\
+    real exchange rate    & trade-weighted measure of real                 \\
+                          & interest rate of the US dollar\footnote{haha}, see Leahy(1998) \\
+    terms of trade        & s\\
+    \hline
+\end{tabular}
+    \end{center}
+\end{table}
 
 
 
