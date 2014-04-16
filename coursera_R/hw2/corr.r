@@ -1,17 +1,12 @@
 # set work directory
 setwd("F:/rfiles/coursera")
 
-complete<-function(directory, id=1:332){
+corr<-function(directory, threshold=0){
+	corr = as.vector(NULL)
 	data_name = dir(directory)
-	n = length(id)
-	
-	# total observations matrix
-	count <- matrix(rep(0,n*2),nrow=n)
-	count <- as.data.frame(count)
-	colnames(count)<-c("id","nobs")
-	for(i in 1:n){
+	for(i in 1:332){
       	# acquire data path in form of£ºspecdata/001.csv
-		data_path = paste(directory,data_name[id[i]],sep='/')
+		data_path = paste(directory,data_name[i],sep='/')
 		
 		#import the data
 		data = read.table(data_path,header=T,sep=',')
@@ -24,11 +19,13 @@ complete<-function(directory, id=1:332){
 		index <- index_sulfate & index_nitrate
 			# debug:
 			# print(index)
-		count[i,1]=id[i]
-		count[i,2]=sum(index)
+		if(sum(index)>threshold){
+			corr_new<-cor(data[,2][index],data[,3][index])
+			corr=append(corr,corr_new)
+			
+	}
 	
 	}	
-            
-		return(count)
+            if(length(corr)==0){return(corr)}
+		else{return(round(corr,5))}
 }
-

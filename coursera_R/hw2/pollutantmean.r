@@ -1,6 +1,6 @@
 setwd("F:/rfiles/coursera")
 
-pollutantmean<-function(directory, pollutant, id){
+pollutantmean<-function(directory, pollutant, id=1:332){
 	data_name = dir(directory)
 	
 	# sulfate or nitrate
