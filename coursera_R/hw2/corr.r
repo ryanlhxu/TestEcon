@@ -2,7 +2,8 @@
 setwd("F:/rfiles/coursera")
 
 corr<-function(directory, threshold=0){
-	corr = as.vector(NULL)
+	print(threshold)
+	corr = c()
 	data_name = dir(directory)
 	for(i in 1:332){
       	# acquire data path in form of£ºspecdata/001.csv
@@ -26,6 +27,7 @@ corr<-function(directory, threshold=0){
 	}
 	
 	}	
-            if(length(corr)==0){return(corr)}
-		else{return(round(corr,5))}
+            #print(corr)
+		if(length(corr)==0){return(corr)}
+		else{return(corr)}
 }
