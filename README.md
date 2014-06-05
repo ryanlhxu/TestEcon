@@ -11,5 +11,7 @@ This repository includes some files of my practice, mainly for **economics** stu
    
    This is a practice replicating the DSGE model of *Heathcote and Perri (2002)*.
 
+3. test_pandas
+
 
    
