@@ -13,5 +13,4 @@ This repository includes some files of my practice, mainly for **economics** stu
 
 3. test_pandas
 
-
-   
+   I clean the data using China's manufacturing data from 1998 to 2007.  
