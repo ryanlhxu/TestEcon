@@ -1,12 +1,19 @@
+'''acquire the 2001 data
+'''
+
 from pandas import *
 from numpy import *
+import os
+
+# set working directory 
+os.chdir('/media/xuliheng/1830A48430A46B08/PythonFiles/tfp/')
 
 # import the data
-data_01 = read_csv('data_01.csv',dtype={'code_industry':str,'open_year':str})
+data_01 = read_stata('/media/xuliheng/1830A48430A46B08/industry/2001.dta')
 
 # select the variables
 data01 = data_01[["id","code_9803","code_industry",'type_reg','type_stateowned','open_year','employee','output','export'
-                ,'fixasset_total','depreciation_year','tax_va','input']]
+                ,'fixasset_total','depreciation_year','tax_va','input','code_post']]
 del data_01
 
 # create new variables
